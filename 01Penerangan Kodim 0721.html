@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENERANGAN KODIM 0721/BLORA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .main-news {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .main-news img {
+            width: 100%;
+            height: auto;
+        }
+        .main-news h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .news-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .news-item {
+            width: 30%;
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-item h3 {
+            font-size: 1.2rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PENERANGAN KODIM 0721/BLORA</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Berita Terbaru</a>
+        <a href="#">Kategori</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <section class="main-news">
+        <a href="https://id.m.wikipedia.org/wiki/Berkas:LOGO-KOREM-073.png">
+    <img src="https://id.m.wikipedia.org/wiki/Berkas:LOGO-KOREM-073.png" alt="Logo Website" width="150">
+</a>
+        <h2>Berita Utama Hari Ini</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac placerat augue. Aliquam erat volutpat.</p>
+    </section>
+
+    <section class="news-list">
+        <div class="news-item">
+            <h3>Berita 1</h3>
+            <p>Dukung Timnas Indonesia, Satgas TMMD 122 Kodim Blora Gelar Nobar Bersama Masyarakat 
+
+BLORA - Dalam rangka meningkatkan kebersamaan, serta memupuk jiwa Patriotisme dan Nasionalisme, Anggota Satgas TMMD Reguler ke-122 Kodim 0721/Blora menggelar kegiatan nonton bareng (Nobar) mendukung pertandingan Timnas Indonesia melawan Timnas China di ajang Kualifikasi Piala Dunia 2026.
+
+Pelaksanaan Nobar digelar di Pendopo Rumah Kepala Desa Sidomulyo Suyatman diikuti Dan SSK Kapten Inf Maningsun, Pa Piket Kotis Kapten Cpl Sumanto, Pasiter Kapten Inf Lukman Hakim, Satgas TMMD, serta warga masyarakat sekitar, Selasa (15/10/2024) malam.
+
+Dan SSK Kapten Inf Maningsun menegaskan bahwa kegiatan ini dilaksanakan dalam rangka mendukung Timnas Indonesia melawan Timnas China dalam perhelatan Kualifikasi Piala Dunia 2026 yang dimainkan di Qingdao Youth Football Stadium, Qingdao. “Laga diprediksi sengit, China selaku tuan rumah jadi lawan sulit bagi Timnas Indonesia,” ucapnya
+
+Selain itu Nobar, kegiatan ini juga bertujuan untuk meningkatkan kebersamaan dan keakraban antara anggota Satgas TMMD dengan warga masyarakat sekitar, dan juga tentunya lebih meningkatkan jiwa patriotisme serta nasionalisme dan kecintaan kita terhadap NKRI dengan mendukung Timnas Indonesia.
+
+“Kebetulan kegiatan laga kualifikasi ini dilaksanakan pada malam hari seusai pengerjaan sasaran fisik selesai, rasa lelah setelah seharian bekerja tak menyurutkan personil Satgas TMMD untuk terus berbaur bersama masyarakat,” tambah Dan SSK.
+
+Dalam laga tersebut Timnas Indonesia kalah tipis dari Timnas China dengan skor 2-1, dengan hasil ini, Indonesia masih tertahan di posisi kelima klasemen Kualifikasi Piala Dunia 2026 ronde ketiga Grup F dengan torehan tiga poin. China masih ada di posisi terbawah juga dengan raihan poin yang sama, Indonesia unggul selisih gol.</p>
+        </div>
+        <div class="news-item">
+            <h3>Berita 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend.</p>
+        </div>
+        <div class="news-item">
+            <h3>Berita 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PENERANGAN KODIM 0721/BLORA. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
+<input type="text" id="search" placeholder="Cari Berita..." onkeyup="searchNews()">
+<script>
+    function searchNews() {
+        var input = document.getElementById('search').value.toLowerCase();
+        var newsItems = document.getElementsByClassName('news-item');
+        for (var i = 0; i < newsItems.length; i++) {
+            var title = newsItems[i].getElementsByTagName('h3')[0].textContent.toLowerCase();
+            if (title.includes(input)) {
+                newsItems[i].style.display = '';
+            } else {
+                newsItems[i].style.display = 'none';
+            }
+        }
+    }
+</script>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #FF5733; /* warna oranye */
+    }
+</style>
+<style>
+    body {
+        background-color: rgb(34, 139, 34); /* warna hijau tua */
+    }
+</style>
+<style>
+    body {
+        background-color: blue; /* warna biru */
+    }
+</style>
+<style>
+    body {
+        background-color: rgba(255, 0, 0, 0.5); /* merah dengan transparansi 50% */
+    }
+</style>
+
